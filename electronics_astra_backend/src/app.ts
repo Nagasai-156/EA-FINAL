@@ -4,6 +4,7 @@ import path from 'path';
 import dotenv from 'dotenv';
 import problemsRouter from './routers/problems';
 import filesRouter from './routers/files';
+import submissionsRouter from './routers/submissions';
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.get('/health', (req, res) => {
 // Routes
 app.use('/api/problems', problemsRouter);
 app.use('/api/files', filesRouter);
+app.use('/api/submissions', submissionsRouter);
 
 // 404 handler
 app.use((req, res) => {
